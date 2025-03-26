@@ -11,7 +11,7 @@ import (
 	"os"
 
 	"github.com/ChimeraCoder/anaconda"
-	"github.com/dgraph-io/badger/y"
+	"github.com/dgraph-io/badger/v4/y"
 )
 
 var (
