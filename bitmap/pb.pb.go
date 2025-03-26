@@ -11,7 +11,7 @@ import (
 	math "math"
 	math_bits "math/bits"
 
-	pb "github.com/dgraph-io/badger/v3/pb"
+	pb "github.com/dgraph-io/badger/v4/pb"
 	api "github.com/dgraph-io/dgo/v200/protos/api"
 	_ "github.com/gogo/protobuf/gogoproto"
 	proto "github.com/gogo/protobuf/proto"
