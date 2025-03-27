@@ -14,9 +14,9 @@ import (
 	"time"
 
 	"github.com/ChimeraCoder/anaconda"
-	"github.com/dgraph-io/badger"
-	bopt "github.com/dgraph-io/badger/options"
-	"github.com/dgraph-io/badger/y"
+	"github.com/dgraph-io/badger/v4"
+	bopt "github.com/dgraph-io/badger/v4/options"
+	"github.com/dgraph-io/badger/v4/y"
 	"github.com/hypermodeinc/dgraph/x"
 	"github.com/hypermodeinc/dgraph/xidmap"
 )
