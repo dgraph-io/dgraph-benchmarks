@@ -1,26 +1,24 @@
 module github.com/hypermodeinc/dgraph-benchmarks/bitmap
 
-go 1.22.12
+go 1.23.0
+
 toolchain go1.24.1
 
 require (
 	github.com/dgraph-io/badger/v4 v4.6.0
 	github.com/dgraph-io/dgo/v200 v200.0.0-20210125093441-2ab429259580
-	github.com/dgraph-io/ristretto v0.1.1
+	github.com/dgraph-io/ristretto v0.2.0
 	github.com/dgraph-io/roaring v0.5.6-0.20210305191002-fa54ba7e926a
 	github.com/dgryski/go-groupvarint v0.0.0-20190318181831-5ce5df8ca4e1
 	github.com/gogo/protobuf v1.3.2
 	github.com/stretchr/testify v1.10.0
-	google.golang.org/grpc v1.56.3
+	google.golang.org/grpc v1.71.0
 )
 
 require (
 	github.com/cespare/xxhash/v2 v2.3.0 // indirect
 	github.com/davecgh/go-spew v1.1.1 // indirect
-	github.com/dgryski/go-farm v0.0.0-20200201041132-a6ae2369ad13 // indirect
 	github.com/dustin/go-humanize v1.0.1 // indirect
-	github.com/golang/glog v1.2.4 // indirect
-	github.com/golang/protobuf v1.5.3 // indirect
 	github.com/kr/pretty v0.3.1 // indirect
 	github.com/mschoch/smat v0.0.0-20160514031455-90eadee771ae // indirect
 	github.com/pkg/errors v0.9.1 // indirect
