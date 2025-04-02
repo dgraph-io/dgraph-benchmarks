@@ -7,7 +7,7 @@ toolchain go1.24.1
 require (
 	github.com/dgraph-io/badger/v4 v4.6.0
 	github.com/dgraph-io/dgo/v200 v200.0.0-20210125093441-2ab429259580
-	github.com/dgraph-io/ristretto v0.2.0
+	github.com/dgraph-io/ristretto/v2 v2.1.0
 	github.com/dgraph-io/roaring v0.5.6-0.20210305191002-fa54ba7e926a
 	github.com/dgryski/go-groupvarint v0.0.0-20190318181831-5ce5df8ca4e1
 	github.com/gogo/protobuf v1.3.2

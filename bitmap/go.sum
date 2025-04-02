@@ -11,8 +11,8 @@ github.com/dgraph-io/badger/v4 v4.6.0 h1:acOwfOOZ4p1dPRnYzvkVm7rUk2Y21TgPVepCy5d
 github.com/dgraph-io/badger/v4 v4.6.0/go.mod h1:KSJ5VTuZNC3Sd+YhvVjk2nYua9UZnnTr/SkXvdtiPgI=
 github.com/dgraph-io/dgo/v200 v200.0.0-20210125093441-2ab429259580 h1:ZdOpRE98+fV+z9dPAixXX+LsRTFKYxqQbacc9yT4MQs=
 github.com/dgraph-io/dgo/v200 v200.0.0-20210125093441-2ab429259580/go.mod h1:1LUTb0AVUKsPQhajQinkz2TnpIrD2C1yFNtVgk5lW5A=
-github.com/dgraph-io/ristretto v0.2.0 h1:XAfl+7cmoUDWW/2Lx8TGZQjjxIQ2Ley9DSf52dru4WE=
-github.com/dgraph-io/ristretto v0.2.0/go.mod h1:8uBHCU/PBV4Ag0CJrP47b9Ofby5dqWNh4FicAdoqFNU=
+github.com/dgraph-io/ristretto/v2 v2.1.0 h1:59LjpOJLNDULHh8MC4UaegN52lC4JnO2dITsie/Pa8I=
+github.com/dgraph-io/ristretto/v2 v2.1.0/go.mod h1:uejeqfYXpUomfse0+lO+13ATz4TypQYLJZzBSAemuB4=
 github.com/dgraph-io/roaring v0.5.6-0.20210305191002-fa54ba7e926a h1:jcaPBPeWTWnltLLNAOhJVG7Atw5X4lDgDXOG2w/TRCQ=
 github.com/dgraph-io/roaring v0.5.6-0.20210305191002-fa54ba7e926a/go.mod h1:aBi3k7+/LPOBRxCokcmphZZkx0C7Fvrn8HxQUDOExks=
 github.com/dgryski/go-farm v0.0.0-20200201041132-a6ae2369ad13 h1:fAjc9m62+UWV/WAFKLNi6ZS0675eEUC9y3AlwSbQu1Y=
