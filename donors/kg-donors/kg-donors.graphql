@@ -1,0 +1,38 @@
+
+
+type School {
+  id: ID!
+  name: String!  @search(by: [term])
+  type: String!  @search(by: [hash])
+  zip: Location  @hasInverse(field: "school")
+}
+
+type Location {
+  zip: String! @id
+  district: String @search(by: [hash])
+  city: String!  @search(by: [hash])
+  county: String  @search(by: [hash])
+  state: String!  @search(by: [hash])
+  geoloc: Point
+  school: [School] @hasInverse(field: "zip")
+}
+
+type District{
+  id: String! @id
+  name: String! @search(by: [hash])
+  county: County
+}
+type County {
+  id: String! @id
+  name: String! @search(by: [hash])
+  city: State
+}
+type City {
+  id: String! @id
+  name: String! @search(by: [hash])
+  state: State
+}
+type State {
+  name: String! @id
+}
+
