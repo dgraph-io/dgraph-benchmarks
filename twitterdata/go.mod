@@ -6,7 +6,7 @@ toolchain go1.24.2
 require (
 	github.com/ChimeraCoder/anaconda v2.0.0+incompatible
 	github.com/dgraph-io/badger/v4 v4.7.0
-	github.com/hypermodeinc/dgraph v24.1.1
+	github.com/hypermodeinc/dgraph v24.1.2
 )
 
 require (
