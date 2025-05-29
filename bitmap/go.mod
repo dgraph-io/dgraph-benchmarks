@@ -2,7 +2,7 @@ module github.com/hypermodeinc/dgraph-benchmarks/bitmap
 
 go 1.23.0
 
-toolchain go1.24.2
+toolchain go1.24.3
 
 require (
 	github.com/dgraph-io/badger/v4 v4.7.0
@@ -12,7 +12,7 @@ require (
 	github.com/dgryski/go-groupvarint v0.0.0-20190318181831-5ce5df8ca4e1
 	github.com/gogo/protobuf v1.3.2
 	github.com/stretchr/testify v1.10.0
-	google.golang.org/grpc v1.72.0
+	google.golang.org/grpc v1.72.2
 )
 
 require (
