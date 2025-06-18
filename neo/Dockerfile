@@ -1,6 +1,6 @@
 # Dockerfile for DGraph
 
-FROM golang:1.24.3
+FROM golang:1.24.4
 MAINTAINER Manish Jain <manishrjain@gmail.com>
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
