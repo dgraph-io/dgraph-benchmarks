@@ -1,11 +1,11 @@
 module github.com/hypermodeinc/dgraph-benchmarks/twitterdata
 
 go 1.22.12
-toolchain go1.24.2
+toolchain go1.25.0
 
 require (
 	github.com/ChimeraCoder/anaconda v2.0.0+incompatible
-	github.com/dgraph-io/badger/v4 v4.7.0
+	github.com/dgraph-io/badger/v4 v4.8.0
 	github.com/hypermodeinc/dgraph v24.1.2
 )
 

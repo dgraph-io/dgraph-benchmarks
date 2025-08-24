@@ -2,17 +2,17 @@ module github.com/hypermodeinc/dgraph-benchmarks/bitmap
 
 go 1.23.0
 
-toolchain go1.24.2
+toolchain go1.25.0
 
 require (
-	github.com/dgraph-io/badger/v4 v4.7.0
+	github.com/dgraph-io/badger/v4 v4.8.0
 	github.com/dgraph-io/dgo/v200 v200.0.0-20210125093441-2ab429259580
-	github.com/dgraph-io/ristretto/v2 v2.2.0
+	github.com/dgraph-io/ristretto/v2 v2.3.0
 	github.com/dgraph-io/roaring v0.5.6-0.20210305191002-fa54ba7e926a
 	github.com/dgryski/go-groupvarint v0.0.0-20190318181831-5ce5df8ca4e1
 	github.com/gogo/protobuf v1.3.2
-	github.com/stretchr/testify v1.10.0
-	google.golang.org/grpc v1.72.0
+	github.com/stretchr/testify v1.11.0
+	google.golang.org/grpc v1.75.0
 )
 
 require (
@@ -24,9 +24,9 @@ require (
 	github.com/pmezard/go-difflib v1.0.0 // indirect
 	github.com/rogpeppe/go-internal v1.13.1 // indirect
 	github.com/willf/bitset v1.1.10 // indirect
-	golang.org/x/net v0.38.0 // indirect
-	golang.org/x/sys v0.31.0 // indirect
-	golang.org/x/text v0.23.0 // indirect
+	golang.org/x/net v0.41.0 // indirect
+	golang.org/x/sys v0.35.0 // indirect
+	golang.org/x/text v0.26.0 // indirect
 	google.golang.org/genproto v0.0.0-20230410155749-daa745c078e1 // indirect
 	google.golang.org/protobuf v1.36.6 // indirect
 	gopkg.in/check.v1 v1.0.0-20201130134442-10cb98267c6c // indirect
