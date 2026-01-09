@@ -1,0 +1,34 @@
+[project]
+name = "beir-dgraph-benchmark"
+version = "0.1.0"
+description = "BEIR benchmark testing for Dgraph vector search"
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+    "pydgraph>=23.0.0",
+    "beir>=2.0.0",
+    "sentence-transformers>=2.2.0",
+    "numpy>=1.24.0",
+    "pandas>=2.0.0",
+    "tqdm>=4.65.0",
+    "python-dotenv>=1.0.0",
+    "requests>=2.31.0",
+    "matplotlib>=3.7.0",
+]
+
+[dependency-groups]
+dev = [
+    "jupyter>=1.0.0",
+    "ipykernel>=6.25.0",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["."]
+only-include = [
+    "*.py",
+    "*.md",
+]

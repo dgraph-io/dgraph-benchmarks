@@ -1,0 +1,46 @@
+{
+  "description": "Excellent/state-of-the-art performance for SciFact with larger models",
+  "source": "BEIR benchmark paper and leaderboard (https://github.com/beir-cellar/beir)",
+  "model_type": "Large bi-encoder or cross-encoder re-ranking",
+  "config": {
+    "dataset": "scifact",
+    "embedding_model": "all-mpnet-base-v2 or similar large models",
+    "embedding_dim": 768,
+    "notes": "State-of-the-art dense retrieval, potentially with re-ranking"
+  },
+  "metrics": {
+    "ndcg": {
+      "NDCG@1": 0.62,
+      "NDCG@3": 0.67,
+      "NDCG@5": 0.69,
+      "NDCG@10": 0.70,
+      "NDCG@100": 0.72
+    },
+    "map": {
+      "MAP@1": 0.60,
+      "MAP@3": 0.64,
+      "MAP@5": 0.66,
+      "MAP@10": 0.67,
+      "MAP@100": 0.68
+    },
+    "recall": {
+      "Recall@1": 0.60,
+      "Recall@3": 0.73,
+      "Recall@5": 0.79,
+      "Recall@10": 0.84,
+      "Recall@100": 0.95
+    },
+    "precision": {
+      "P@1": 0.62,
+      "P@3": 0.27,
+      "P@5": 0.18,
+      "P@10": 0.10,
+      "P@100": 0.01
+    }
+  },
+  "expected_performance": {
+    "description": "These scores represent excellent performance achievable with larger models and optimal HNSW settings",
+    "use_case": "High-quality retrieval where accuracy is critical",
+    "notes": "May require more compute resources (768-dim embeddings, higher HNSW parameters)"
+  }
+}

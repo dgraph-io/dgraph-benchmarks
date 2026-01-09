@@ -1,0 +1,45 @@
+{
+  "description": "Acceptable baseline performance for SciFact with all-MiniLM-L6-v2 (384-dim)",
+  "source": "BEIR benchmark paper and leaderboard (https://github.com/beir-cellar/beir)",
+  "model_type": "Small bi-encoder",
+  "config": {
+    "dataset": "scifact",
+    "embedding_model": "all-MiniLM-L6-v2",
+    "embedding_dim": 384,
+    "notes": "Baseline dense retrieval with small efficient model"
+  },
+  "metrics": {
+    "ndcg": {
+      "NDCG@1": 0.52,
+      "NDCG@3": 0.60,
+      "NDCG@5": 0.63,
+      "NDCG@10": 0.65,
+      "NDCG@100": 0.68
+    },
+    "map": {
+      "MAP@1": 0.50,
+      "MAP@3": 0.57,
+      "MAP@5": 0.59,
+      "MAP@10": 0.60,
+      "MAP@100": 0.61
+    },
+    "recall": {
+      "Recall@1": 0.50,
+      "Recall@3": 0.65,
+      "Recall@5": 0.72,
+      "Recall@10": 0.78,
+      "Recall@100": 0.90
+    },
+    "precision": {
+      "P@1": 0.52,
+      "P@3": 0.23,
+      "P@5": 0.16,
+      "P@10": 0.09,
+      "P@100": 0.01
+    }
+  },
+  "expected_performance": {
+    "description": "These scores represent acceptable baseline performance for a small embedding model on SciFact",
+    "use_case": "Fast, resource-efficient retrieval with reasonable quality"
+  }
+}
