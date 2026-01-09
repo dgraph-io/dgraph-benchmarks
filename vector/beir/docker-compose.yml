@@ -1,0 +1,35 @@
+version: '3.8'
+
+services:
+  dgraph-zero:
+    image: ${DGRAPH_IMAGE:-dgraph/dgraph}:${DGRAPH_VERSION:-latest}
+    container_name: dgraph-zero
+    hostname: zero
+    ports:
+      - "5080:5080"
+      - "6080:6080"
+    command: dgraph zero --my=dgraph-zero:5080
+    networks:
+      - dgraph-network
+
+  dgraph-alpha:
+    image: ${DGRAPH_IMAGE:-dgraph/dgraph}:${DGRAPH_VERSION:-latest}
+    container_name: dgraph_alpha
+    hostname: alpha
+    ports:
+      - "8080:8080"
+      - "9080:9080"
+    depends_on:
+      - dgraph-zero
+    command: dgraph alpha --my=dgraph-alpha:7080 --zero=dgraph-zero:5080 --security "whitelist=0.0.0.0/0;"
+    networks:
+      - dgraph-network
+    volumes:
+      - dgraph-data:/dgraph
+
+networks:
+  dgraph-network:
+    driver: bridge
+
+volumes:
+  dgraph-data:
