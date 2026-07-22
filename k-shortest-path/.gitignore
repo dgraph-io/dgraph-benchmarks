@@ -1,0 +1,6 @@
+datasets/
+results/
+data-p/
+bulk-out/
+*.rdf.gz
+*.tar.zst
