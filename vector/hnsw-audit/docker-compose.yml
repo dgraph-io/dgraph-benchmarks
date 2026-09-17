@@ -1,0 +1,53 @@
+# Cluster for the HNSW unfindable-vector audit. run.sh drives the phases per
+# (index_mode, efConstruction):
+#   1. zero + alpha    (persistent, fresh each run via `down -v`)
+#   2. alter raw schema, then `live` (one-shot: dgraph live -> alpha), then
+#      alter the index schema so the build runs on the (re)index path
+#   3. audit.py self-queries a sample of vectors
+# Set DGRAPH_VERSION=local to test a locally built dgraph/dgraph:local image.
+
+services:
+  zero:
+    image: ${DGRAPH_IMAGE:-dgraph/dgraph}:${DGRAPH_VERSION:-local}
+    hostname: zero
+    command: dgraph zero --my=zero:5080 --replicas 1
+    ports:
+      - "5080:5080"
+      - "6080:6080"
+    networks:
+      - dgraph
+
+  alpha:
+    image: ${DGRAPH_IMAGE:-dgraph/dgraph}:${DGRAPH_VERSION:-local}
+    hostname: alpha
+    depends_on:
+      - zero
+    command: >
+      dgraph alpha --my=alpha:7080 --zero=zero:5080
+      --security "whitelist=0.0.0.0/0;"
+    ports:
+      - "8080:8080"
+      - "9080:9080"
+    networks:
+      - dgraph
+
+  # One-shot live loader: streams the materialized RDF into the running alpha.
+  live:
+    image: ${DGRAPH_IMAGE:-dgraph/dgraph}:${DGRAPH_VERSION:-local}
+    depends_on:
+      - zero
+      - alpha
+    command: >
+      dgraph live
+      --files /work/data.rdf.gz
+      --alpha alpha:9080
+      --zero zero:5080
+      --conc ${LIVE_THREADS:-8}
+    volumes:
+      - ./work:/work:ro
+    networks:
+      - dgraph
+
+networks:
+  dgraph:
+    driver: bridge
