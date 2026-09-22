@@ -1,0 +1,20 @@
+[project]
+name = "bulk-load-vector-benchmark"
+version = "0.1.0"
+description = "Bulk-load build-speed, memory, and recall benchmark for Dgraph vector indexes"
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+    "pydgraph>=23.0.0",
+    "numpy>=1.24.0",
+    "h5py>=3.9.0",
+    "python-dotenv>=1.0.0",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["."]
+only-include = ["*.py", "*.md"]

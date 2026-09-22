@@ -1,0 +1,16 @@
+# Python / uv
+__pycache__/
+*.py[cod]
+.venv/
+.uv/
+
+# Downloaded datasets and generated RDF/schema (materialized on run)
+data/
+work/
+
+# Environment
+.env
+
+# OS / editor
+.DS_Store
+*.swp
